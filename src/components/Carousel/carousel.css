@@ -1,0 +1,39 @@
+.carousel {
+    position: relative;
+    width: 100%;
+  }
+  
+
+  .prev {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    top: 50%;
+    left: 10px;
+    background: none;
+    border: none;
+  }
+  
+  .next {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    top: 50%;
+    right: 10px;
+    background: none;
+    border: none;
+  }
+
+  .carousel p {
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    z-index: 1;
+    padding: 5px 10px; 
+  }
+  
+  .carousel img {
+    width: 100%; 
+    height: auto;
+  }
+  

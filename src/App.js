@@ -1,4 +1,3 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 //importer toutes les pages
 import Home from "./pages/Home";
@@ -8,17 +7,17 @@ import Error from "./pages/Error";
 
 
 function App() {
+  console.log('APP is okay'); // Ajout d'un console.log pour vérifier si le composant est rendu
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/About" element={ <About /> } />
-        <Route path="/Rental/:id" element={ <Rental /> } />
-        <Route path="*" element={ <Error /> } />
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Rental/:id" element={<Rental />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
-}
-// <Route path='/nomduchemin' element={ <nomdelapage /> } />
+};
 
 export default App;

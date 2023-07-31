@@ -1,0 +1,32 @@
+/* CSS pour les éléments de la galerie */
+  .rental-card {
+    width: 340px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .rental-card .image-card {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .rental-card .image-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .rental-card h2 {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    padding: 10px;
+  }
+  
+
+
+
+
+
