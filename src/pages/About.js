@@ -14,7 +14,7 @@ function About() {
         image={Mountains}
         alt="vue d'un paysage montagneux"
       />
-      <Collapse data={valuesDatas} title='title' content='content' />
+      <Collapse data={valuesDatas} title='titleValue' content='content' />
       <Footer />
     </div>
   );

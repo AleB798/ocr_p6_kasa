@@ -3,7 +3,7 @@ import whiteArrowOpen from "../../assets/arrow_open.svg";
 import whiteArrowClose from '../../assets/arrow_close.svg';
 import '../Collapse/collapse.css';
 
-function CollapseItem({ title, content }) {
+function CollapseItem({ title, customTitle, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -13,7 +13,7 @@ function CollapseItem({ title, content }) {
   return (
     <div>
       <div className="collapse-container" onClick={toggleCollapse}>
-        <h3>{title}</h3>
+        <h3>{title || customTitle}</h3>
         <img
           src={isOpen ? whiteArrowClose : whiteArrowOpen}
           alt={isOpen ? "Fermer" : "Ouvrir"}
@@ -24,13 +24,14 @@ function CollapseItem({ title, content }) {
   );
 }
 
-function Collapse({ data, title, content }) {
+function Collapse({ data, title, customTitle, content }) {
   return (
     <div>
       {data.map(item => (
         <CollapseItem
           key={item.id}
           title={item[title]}
+          customTitle={customTitle}
           content={item[content]}
         />
       ))}

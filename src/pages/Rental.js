@@ -32,8 +32,8 @@ export function RentalProfil() {
         <Tags data={[accommodation]} />
         <Host data={[accommodation]} />
         <StarsRating rate={[accommodation.rating]} />
-        <Collapse data={[accommodation]} title='title' content='description' />
-        <Collapse data={[accommodation]} title='title' content='equipments' />
+        <Collapse data={[accommodation]} customTitle='Description' content='description' />
+        <Collapse data={[accommodation]} customTitle='Equipements' content='equipments' />
         <Footer />
       </div>
     );
