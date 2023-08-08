@@ -5,10 +5,11 @@ import Footer from '../components/Footer/Footer.jsx';
 import Collapse from "../components/Collapse/Collapse.jsx";
 import Mountains from "../assets/moutains_view_1240.webp";
 import { valuesDatas } from "../datas/valeurs.js";
+import '../pages/about.scss';
 
 function About() {
   return (
-    <div>
+    <div className='about'>
       <Header />
       <Banner
         image={Mountains}

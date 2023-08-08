@@ -1,0 +1,49 @@
+@import '../../styles/style.scss';
+
+.rental-gallery {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  background-color: $light-background-color;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-gap: 40px;
+  padding: 40px 35px;
+
+  .rental-card {
+    width: 100%;
+    max-width: 340px;
+    height: 340px;
+    position: relative;
+    margin: 0 auto;
+
+    img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .overlay-card {
+      height: 100%;
+      width: 100%;
+      background: $linear-gradient;
+      border-radius: 10px;
+      position: absolute;
+      z-index: 1;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $white;
+        position: absolute;
+        bottom: 5%;
+        padding: 0 15px;
+      }
+    }  
+  }
+}

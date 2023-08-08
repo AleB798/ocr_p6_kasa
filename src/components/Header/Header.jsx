@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo_kasa_orange.svg';
-import '../Header/header.css';
+import '../Header/header.scss';
 
 function Header() {
   return (
     <header>
       <img src={logo} alt="Logo Kasa version orange" />
-      <nav>
+      <nav className='navbar'>
         <Link to="/">Accueil</Link>
         <Link to="/About">À propos</Link>
       </nav>

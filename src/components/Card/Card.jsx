@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import '../Card/card.css'
-
 
 function Card({id, cover, title}) {
     return (
-        <div>
           <div key={id} className="rental-card">
             <Link to={`/Rental/${id}`}>
-              <div className="image-card">
+              <div>
                 <img src={cover} alt={title}/>
               </div>
-              <h2>{title}</h2>
+              <div className='overlay-card'>
+                <h2>{title}</h2>
+              </div>
             </Link>
           </div>
-        </div>
     )
 }
 

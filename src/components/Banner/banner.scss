@@ -1,0 +1,30 @@
+@import '../../styles/style.scss';
+
+.banner {
+    width: 1240px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: $second-color;
+    border-radius: 25px;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 223px;
+        object-fit: cover;
+        position: relative;
+        border-radius: 25px;
+        opacity: 0.7;
+    }
+    
+    p {
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 500;
+        color: $white;
+        position: absolute;
+        align-self: center;
+    }   
+}
+

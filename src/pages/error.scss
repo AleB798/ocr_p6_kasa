@@ -1,0 +1,33 @@
+@import '../styles/style.scss';
+
+.error-page {
+
+    @include global-position;
+    text-align: center;
+    color: $main-color;
+
+        .error-section {
+
+                .error-number {
+                    font-size: 288px;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 36px;
+                    font-weight: 500;
+                    margin-top: 140px;
+                }
+
+                .error-link {
+                    margin: 140px 0;
+
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $main-color;
+                    }
+
+                }      
+        }
+}

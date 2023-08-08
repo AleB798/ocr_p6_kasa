@@ -6,8 +6,8 @@ function Tags({ data }) {
     <div className="tags-container">
         <ul>
             {data.map((item) => (
-                item.tags.map((tags) => (
-                    <li key={tags.id} className="tags-item">{tags}</li>
+                item.tags.map((tags, index) => (
+                    <li key={`${index}-${tags.title}`} className="tags-item">{tags}</li>
                 ))
             ))}
         </ul>

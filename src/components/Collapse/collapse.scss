@@ -1,0 +1,33 @@
+@import '../../styles/style.scss';
+
+.all-collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.collapse-container {
+    width: 1023px;
+    background-color: #FF6060;
+    padding: 10px 20px 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    >h3 {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: left;
+        color: $white;
+    }
+
+    .collapse-content {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        background-color: $light-background-color;
+    }
+}
+
+

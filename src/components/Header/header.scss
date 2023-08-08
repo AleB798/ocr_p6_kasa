@@ -1,0 +1,32 @@
+@import '../../styles/style.scss';
+
+header {
+  width: 100%;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    img {
+      width: 210px;
+      align-items: center;
+    }
+  
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+  
+      a {
+        color: $main-color;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: solid 2px $main-color;
+        }
+      }
+    }
+  }
+  

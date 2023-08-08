@@ -5,7 +5,6 @@ import About from "./pages/About";
 import Rental from "./pages/Rental";
 import Error from "./pages/Error";
 
-
 function App() {
   console.log('APP is okay'); // Ajout d'un console.log pour vérifier si le composant est rendu
   return (
@@ -14,6 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Rental/:id" element={<Rental />} />
+        <Route path="/Error" element={<Error />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

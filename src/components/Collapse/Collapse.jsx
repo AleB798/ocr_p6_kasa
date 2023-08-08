@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import whiteArrowOpen from "../../assets/arrow_open.svg";
 import whiteArrowClose from '../../assets/arrow_close.svg';
-import '../Collapse/collapse.css';
+import '../Collapse/collapse.scss';
 
 function CollapseItem({ title, customTitle, content }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,18 +18,18 @@ function CollapseItem({ title, customTitle, content }) {
           src={isOpen ? whiteArrowClose : whiteArrowOpen}
           alt={isOpen ? "Fermer" : "Ouvrir"}
         />
-      </div>
-      {isOpen && <p className="collapse-content">{content}</p>}
+      </div >
+      {isOpen && <p>{content}</p>}
     </div>
   );
 }
 
-function Collapse({ data, title, customTitle, content }) {
+function Collapse({ data, title, customTitle, content, id }) {
   return (
-    <div>
+    <div className='all-collapse'>
       {data.map(item => (
         <CollapseItem
-          key={item.id}
+          key={`${item[id]}-${item[title]}`}
           title={item[title]}
           customTitle={customTitle}
           content={item[content]}
