@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 
 function useFetch(fileName) {
     const [data, setData] = useState([]);
-    console.log('useFetch');
     useEffect(()=> {
-        console.log('useEffect');
         fetch(fileName)
             .then((response) => {
                 if (!response.ok) {

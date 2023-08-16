@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import arrowPrev from '../../assets/arrow_prev.svg';
 import arrowNext from '../../assets/arrow_next.svg';
-import '../Carousel/carousel.css';
+import '../Carousel/carousel.scss';
 
 function Carousel({ pictures, title, index }) {
 
@@ -19,20 +19,26 @@ function Carousel({ pictures, title, index }) {
     setCurrentIndex(newIndex);
   };
 
+  const showNavigation = pictures.length > 1; // pour ajout condition d'apparition de la nav et l'index
+
   return (
     <div className="carousel">
-      <button onClick={prevSlide} className="prev">
-        <img src={arrowPrev} alt={'prev button'} />
-      </button>
+      {showNavigation && (
+        <div>
+          <button onClick={prevSlide} className="prev">
+            <img src={arrowPrev} alt={'prev button'} />
+          </button>
+          <button onClick={nextSlide} className="next">
+            <img src={arrowNext} alt={'next button'} />
+          </button>
+          <p>
+            {currentIndex + 1} / {pictures.length}
+          </p>
+        </div>
+      )}
       <div key={index}>
-        <img src={pictures[currentIndex]} alt={title} />
+        <img src={pictures[currentIndex]} alt={title} className='carousel-img' />
       </div>
-      <button onClick={nextSlide} className="next">
-        <img src={arrowNext} alt={'next button'} />
-      </button>
-      <p>
-        {currentIndex + 1} / {pictures.length}
-      </p>
     </div>
   );
 }

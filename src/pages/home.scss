@@ -1,5 +1,17 @@
 @import '../styles/style.scss';
 
 .homepage {
-    @include global-position;
+    @include flex-content-page;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .homepage {
+        @include flex-content-page-breakpoint;
+
+        .banner {
+            img {
+                max-height: 111px;
+            }
+        }
+    }
 }

@@ -1,0 +1,40 @@
+@import '../../styles/style.scss';
+
+.host {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    margin-top: 10px;
+  
+    p {
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 26px;
+      max-width: 100px;
+      text-align: right;
+    }
+  
+    img {
+      width: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+@media (max-width: $breakpoint-mobile) {
+
+  .host {
+  
+    p {
+      font-size: 0.75rem;
+      max-width: 70px;
+    }
+  
+    img {
+      width: 32px;
+    }
+  }
+
+
+}

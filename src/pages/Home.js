@@ -10,12 +10,12 @@ function Home() {
   return (
     <div className='homepage'>
       <Header />
-      <Banner
-        image={Cliffs}
-        alt="vue d'un paysage avec mer et falaises"
-        text="Chez vous, partout et ailleurs"
-      />
-      <Gallery />
+        <Banner
+          image={Cliffs}
+          alt="vue d'un paysage avec mer et falaises"
+          text="Chez vous, partout et ailleurs"
+        />
+        <Gallery />
       <Footer />
     </div>
   );

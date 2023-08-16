@@ -1,0 +1,69 @@
+@import '../styles/style.scss';
+
+.rental-page {
+    @include flex-content-page;
+
+    .rental-infos {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 40px);
+        max-width: $max-width-body;
+      }
+      
+      .location-infos,
+      .host-rate {
+        flex-basis: 50%;
+      }
+
+      .host-rate {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .collapse-rental-page {
+        display: flex;
+        gap: 76px;
+        width: 100%;
+        max-width: $max-width-body;   
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+  .rental-page {
+      @include flex-content-page-breakpoint;
+
+      .rental-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      
+      .location-infos {
+
+        h2 {
+          font-size: 1.125rem;
+          line-height: 26px;
+        }
+
+        h3 {
+          font-size: 0.875rem;
+          line-height: 20px;
+        }
+      }
+
+      .host-rate {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+
+    .collapse-rental-page {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+  }
+}

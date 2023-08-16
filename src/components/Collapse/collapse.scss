@@ -1,33 +1,77 @@
 @import '../../styles/style.scss';
 
 .all-collapse {
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: calc(100% - 40px);
+  max-width: 1023px;
 
-.collapse-container {
-    width: 1023px;
-    background-color: #FF6060;
-    padding: 10px 20px 10px 15px;
+  .collapse-container {
+    background-color: $main-color;
+    padding: 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    >h3 {
-        font-size: 24px;
+    h3 {
+        font-size: 1.5rem;
         font-weight: 500;
-        text-align: left;
         color: $white;
     }
 
-    .collapse-content {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        background-color: $light-background-color;
+    //animation sur Arrow au click  
+    .rotate-icon {
+      transition: transform 0.3s ease; 
     }
+    
+    .rotate-icon.rotate-180 {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .content-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: $light-background-color;
+    border-radius: 0 0 10px 10px;
+
+    p, li {
+      color: $main-color;
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
 }
+
+@media (max-width: $breakpoint-mobile) {
+
+  .all-collapse {
+    gap: 20px;
+
+    .collapse-container {
+      padding: 10px;
+
+        h3 {
+            font-size: 0.825rem;
+        }
+
+        .rotate-icon {
+          width: 16px; 
+        }
+    }
+
+    .content-container {
+      p, li {
+        font-size: 0.75rem;
+        line-height: 17px;
+      }
+    }
+  }
+}
+  
 
 

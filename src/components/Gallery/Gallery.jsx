@@ -7,15 +7,17 @@ function Gallery() {
   const { data } = useFetch('logements.json');
 
   return (
-    <div className="rental-gallery">
-      {data.map((item) => (
-        <Card
-          key={item.id}
-          id={item.id}
-          cover={item.cover}
-          title={item.title}
-        />
-      ))}
+    <div className='rental-gallery-container'>
+      <div className="rental-gallery">
+        {data.map((item) => (
+          <Card
+            key={item.id}
+            id={item.id}
+            cover={item.cover}
+            title={item.title}
+          />
+        ))}
+      </div>
     </div>
   );
 }

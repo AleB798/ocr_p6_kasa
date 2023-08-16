@@ -8,13 +8,13 @@ function Error() {
     return (
         <div className='error-page'>
             <Header />
-            <section className="error-section">
-                <p className="error-number">404</p>
+            <div className="error-section">
+                <span className="error-number">404</span>
                 <p>Ooups! la page que vous demandez n'existe pas!</p>
                 <div className='error-link'>
                     <Link to="/">Retourner sur la page d'accueil</Link>
                 </div>
-            </section>
+            </div>
             <Footer />
         </div>
     );

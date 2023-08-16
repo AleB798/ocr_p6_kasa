@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import whiteArrowOpen from "../../assets/arrow_open.svg";
 import whiteArrowClose from '../../assets/arrow_close.svg';
 import '../Collapse/collapse.scss';
 
@@ -12,14 +11,27 @@ function CollapseItem({ title, customTitle, content }) {
 
   return (
     <div>
-      <div className="collapse-container" onClick={toggleCollapse}>
+      <div className='collapse-container' onClick={toggleCollapse}>
         <h3>{title || customTitle}</h3>
         <img
-          src={isOpen ? whiteArrowClose : whiteArrowOpen}
-          alt={isOpen ? "Fermer" : "Ouvrir"}
+          src={whiteArrowClose}
+          alt={'toggle Arrow'}
+          className={`rotate-icon ${isOpen ? "rotate-180" : ""}`}
         />
-      </div >
-      {isOpen && <p>{content}</p>}
+      </div>
+      {isOpen && (
+        <div className='content-container'>
+          {typeof content === 'string' ? (
+            <p>{content}</p>
+          ) : (
+            <ul>
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 }

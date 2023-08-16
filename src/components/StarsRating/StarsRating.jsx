@@ -16,7 +16,7 @@ function StarsRating ( { rate } ) {
     unfilledStars.push(<img key={`empty stars-${i}`} src={greystar} alt='Empty Stars'/> );
 
     return (
-        <div>
+        <div className='stars-rating'>
             {filledStars}
             {unfilledStars}
         </div>

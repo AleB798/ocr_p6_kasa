@@ -9,7 +9,7 @@ function Card({id, cover, title}) {
                 <img src={cover} alt={title}/>
               </div>
               <div className='overlay-card'>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
               </div>
             </Link>
           </div>

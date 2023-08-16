@@ -1,8 +1,8 @@
 @import '../../styles/style.scss';
 
 header {
-  width: 100%;
-  padding: 0px 100px;
+  width: calc(100% - 40px);
+  max-width: $max-width-body;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,15 +18,30 @@ header {
       gap: 50px;
   
       a {
-        color: $main-color;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 500;
-        text-decoration: none;
 
-        &:hover {
+        &.active {
           border-bottom: solid 2px $main-color;
         }
       }
     }
   }
+
+//adaptation selon écrans
+@media (max-width: $breakpoint-mobile) {
+  header {
+    img {
+      width: 145px;
+    }
+
+    .navbar {
+      gap : 30px;
+        a {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+        }
+    }
+  }  
+}
   

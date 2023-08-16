@@ -8,9 +8,39 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    font-size: 16px;
+  }
+
 body {
     max-width: 1440px;
     margin: 0 auto; 
-    color: #000000; 
-    background-color: #FFFFFF;
+    color: $main-color; 
+    background-color: $white;
+}
+
+a {
+    text-decoration: none;
+    color: $main-color;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 51px;
+}
+
+h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 26px;
 }
