@@ -1,0 +1,20 @@
+@import '../../styles/style.scss';
+
+.stars-rating {
+
+    img {
+        width: 24px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+
+    .stars-rating {
+
+        img {
+            width: 13px;
+            margin-left: 5px;
+        }
+    }
+};

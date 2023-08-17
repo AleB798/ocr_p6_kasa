@@ -1,6 +1,7 @@
 import React from "react";
 import redstar from '../../assets/red-star.svg';
 import greystar from '../../assets/grey-star.svg';
+import '../StarsRating/starsrating.scss';
 
 function StarsRating ( { rate } ) {
     const maxStars = 5;

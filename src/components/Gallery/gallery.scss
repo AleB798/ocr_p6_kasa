@@ -13,11 +13,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    grid-gap: 40px;
+    grid-gap: 60px;
 
     .rental-card {
       width: 100%;
-      max-width: 340px;
+      min-width: 340px;
       height: 340px;
       position: relative;
       margin: 0 auto;
@@ -59,6 +59,7 @@
     padding: 0;
 
     .rental-gallery {
+      grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
       grid-gap: 27px;
 
       .rental-card {
@@ -69,4 +70,4 @@
       }
     } 
   }
-}
+};

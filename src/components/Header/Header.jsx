@@ -6,10 +6,12 @@ import '../Header/header.scss';
 function Header() {
   return (
     <header>
-      <img src={logo} alt="Logo Kasa version orange" />
+      <NavLink exact="true" to="/">
+        <img src={logo} alt="Logo Kasa version orange" />
+      </NavLink>
       <nav className='navbar'>
         <NavLink exact="true" to="/">Accueil</NavLink>
-        <NavLink to="/About">À propos</NavLink>
+        <NavLink to="/about">À propos</NavLink>
       </nav>
     </header>
   );

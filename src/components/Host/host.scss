@@ -3,9 +3,7 @@
 .host {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     gap: 10px;
-    margin-top: 10px;
   
     p {
       font-size: 1.125rem;
@@ -28,6 +26,7 @@
   
     p {
       font-size: 0.75rem;
+      line-height: 17px;
       max-width: 70px;
     }
   
@@ -35,6 +34,4 @@
       width: 32px;
     }
   }
-
-
 }

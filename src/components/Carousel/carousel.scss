@@ -38,7 +38,7 @@
 @media (max-width: $breakpoint-mobile) {
 
   .carousel {
-    width: calc(100% - 40px);
+    width: 100%;
 
     .prev {
       left: 5px;

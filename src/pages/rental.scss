@@ -3,11 +3,18 @@
 .rental-page {
     @include flex-content-page;
 
+    .rental-body {
+      width: calc(100% - 40px);
+      max-width: $max-width-body;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
     .rental-infos {
         display: flex;
+        width: 100%;
         justify-content: space-between;
-        width: calc(100% - 40px);
-        max-width: $max-width-body;
       }
       
       .location-infos,
@@ -24,21 +31,32 @@
 
     .collapse-rental-page {
         display: flex;
-        gap: 76px;
+        gap: 5%;
         width: 100%;
-        max-width: $max-width-body;   
+
+        .collapse-container {
+          
+          h3 {
+            font-size: 1.125rem;
+            line-height: 26px;
+          }
+        }
     }
-}
+  }
+};
 
 @media (max-width: $breakpoint-mobile) {
 
   .rental-page {
-      @include flex-content-page-breakpoint;
+    @include flex-content-page-breakpoint;
+
+    .rental-body {
+      align-items: flex-start;
 
       .rental-infos {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        gap: 20px;
       }
       
       .location-infos {
@@ -55,15 +73,24 @@
       }
 
       .host-rate {
-        display: flex;
         flex-direction: row-reverse;
-        align-items: flex-end;
-    }
+      }
 
-    .collapse-rental-page {
+      .collapse-rental-page {
         flex-direction: column;
-        align-items: center;
+        width: 100%;
         gap: 20px;
+
+        .all-collapse {
+          width: 100%;
+
+          .collapse-container {
+            h3 {
+              font-size: 0.8125rem
+            }
+          }
+        }
+      }
     }
   }
-}
+};

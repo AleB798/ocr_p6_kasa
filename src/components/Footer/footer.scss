@@ -23,9 +23,11 @@ footer {
 
 @media (max-width: $breakpoint-mobile) {
    footer {
-    p {
-        font-size: 0.75rem;
+        p {
+            font-size: 0.75rem;
+            width: 134px;
+            text-align: center;
+        }
     }
-   }
-  }
+}
 
