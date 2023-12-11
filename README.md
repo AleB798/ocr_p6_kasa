@@ -1,3 +1,15 @@
+# KASA (P6)
+## Création d'une application web de location immobilière avec React
+
+### Missions :
+ - Mettre en œuvre des animations CSS 
+ - Développer une interface web avec Sass
+ - Configurer la navigation entre les pages de l'application avec React Router
+ - Développer des éléments de l'interface d'un site web grâce à des composants React
+ - Initialiser une application avec Create React App
+
+------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
